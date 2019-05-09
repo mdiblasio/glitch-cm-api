@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Credential Management Demo</title>
+  <meta name="description" content="A cool thing made with Glitch">
+  <!-- <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon"> -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/client.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>
+      Sign-in
+    </h1>
+  </header>
+
+  <main>
+
+
+    <form id="signin" method="post">
+      <input name="email" type="text" autocomplete="username email" placeholder="email">
+      <input name="password" type="password" autocomplete="password" placeholder="password">
+      <input type="submit" value="Sign In!">
+    </form>
+
+
+  </main>
+
+   <script src="/client.js"></script>
+  <script>
+  document.querySelector('#signin').addEventListener('submit', async(e) => {
+    e.preventDefault();
+
+    await submitSignIn(e);
+    console.log("HERE");
+    window.location.href = "/index.html";
+  });
+  </script>
+
+  <footer>
+    Made with
+    <a href="https://glitch.com">Glitch</a>!
+  </footer>
+
+</body>
+
+</html>
